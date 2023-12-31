@@ -1,6 +1,6 @@
-import { LitElement, css, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
-import litLogo from './assets/lit.svg'
+import { LitElement, html } from 'lit'
+import { customElement } from 'lit/decorators.js'
+import { BottomSheet } from 'react-spring-bottom-sheet'
 
 /**
  * An example element.
@@ -10,22 +10,11 @@ import litLogo from './assets/lit.svg'
  */
 @customElement('my-element')
 export class MyElement extends LitElement {
-  /**
-   * Copy for the read the docs hint.
-   */
-  @property()
-  docsHint = 'Click on the Vite and Lit logos to learn more'
-
-  /**
-   * The number of times the button has been clicked.
-   */
-  @property({ type: Number })
-  count = 0
-
   render() {
     return html`
       <slot></slot>
-      <p class="read-the-docs">${this.docsHint}</p>
+      <button onClick={() => setOpen(true)}>Open</button>
+      <BottomSheet open={open}>My awesome content here</BottomSheet>
     `
   }
 }

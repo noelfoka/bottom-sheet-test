@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "lit": "^3.1.0"
+    "@advanced-rest-client/bottom-sheet": "^3.2.4",
+    "lit": "^3.1.0",
+    "react-spring-bottom-sheet": "^3.4.1"
   },
   "devDependencies": {
     "typescript": "^5.2.2",

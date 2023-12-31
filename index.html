@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bottom Sheet</title>
     <link rel="stylesheet" href="./src/index.css" />
-    <script type="module" src="/src/my-element.ts"></script>
+    <script type="module" src="/src/my-element.ts">
+      import './node_modules/@advanced-rest-client/bottom-sheet/bottom-sheet.js';
+    </script>
   </head>
   <body>
     <my-element>
       <h1>Hello Lit</h1>
+      <bottom-sheet opened?="{{menuOpened}}">
+        <paper-item>Action #1</paper-item>
+        <paper-item>Action #2</paper-item>
+        <paper-item>Action #3</paper-item>
+      </bottom-sheet>
     </my-element>
   </body>
 </html>

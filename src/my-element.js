@@ -1,6 +1,4 @@
 import { LitElement, css, html } from 'lit'
-import litLogo from './assets/lit.svg'
-import viteLogo from '/vite.svg'
 
 /**
  * An example element.
@@ -43,8 +41,8 @@ export class MyElement extends LitElement {
         </div> 
         <div class="sheet-content"> 
             <h2> 
-                Bottom Sheet Modal 
-              </h2> 
+              Bottom Sheet Modal 
+            </h2> 
             <p> 
                 This is a draggable bottom sheet 
                 modal with different styling. 
@@ -65,7 +63,7 @@ export class MyElement extends LitElement {
 
   startDragging(e) {
     e.preventDefault();
-    this.isDragging = true;
+    this.isDragging = false;
     this.startY = e.clientY;
     this.startBottom = parseInt(getComputedStyle(this.shadowRoot.querySelector('.bottom-sheet')).bottom);
 
@@ -93,7 +91,18 @@ export class MyElement extends LitElement {
 
   static get styles() {
     return css`
-      .show-modal { 
+     body { 
+    font-family: Arial, sans-serif; 
+    background-color: #f2f2f2; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    margin: 0; 
+} 
+  
+.show-modal { 
     background-color: #007bff; 
     color: #fff; 
     border: none; 
@@ -117,6 +126,8 @@ export class MyElement extends LitElement {
     background-color: #fff; 
     border-top-left-radius: 20px; 
     border-top-right-radius: 20px; 
+    transition: bottom 0.3s ease-in-out;
+    bottom: -100%;
     box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.2); 
     overflow: hidden; 
 } 

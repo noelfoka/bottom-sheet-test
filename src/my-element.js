@@ -17,14 +17,15 @@ class BottomSheet extends LitElement {
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: white;
+      background-color: #F7F2FA;
       border-radius: 25px 25px 0 0;
       touch-action: none; /* this is required to enable dragging on mobile devices */
     }
     .line {
       width: 30px;
       height: 4px;
-      background-color: grey;
+      background-color: #49454F;
+      opacity: 0.4;
       margin: 15px auto;
       border-radius: 2px;
     }
@@ -36,8 +37,8 @@ class BottomSheet extends LitElement {
     }
 
     .icon {
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       background-color: #f0f0f0;
       display: flex;
@@ -61,7 +62,7 @@ class BottomSheet extends LitElement {
   justify-content: space-around;
   border-radius: 20px;
   background-color: #f0f0f0;
-  color: black;
+  color: #6750A4;
   font-size: 16px;
 }
 
@@ -80,8 +81,8 @@ class BottomSheet extends LitElement {
 }
 
 .contact-photo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
@@ -92,14 +93,15 @@ class BottomSheet extends LitElement {
 }
 
 .files {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
 .copy {
   width: 25px;
   height: 25px;
+  color: #6750A4;
 }
 
 @media (min-width: 768px) {
@@ -109,7 +111,7 @@ class BottomSheet extends LitElement {
       justify-content: center;
       bottom: 0;
       width: 80%;
-      background-color: white;
+      background-color: #F7F2FA;
       border-radius: 25px 25px 0 0;
       touch-action: none; /* this is required to enable dragging on mobile devices */
     }

@@ -1,4 +1,4 @@
-# Project Title
+# Bottom Sheet
 
 This project includes a custom `BottomSheet` component built with Lit.
 
@@ -8,35 +8,35 @@ Before you begin, ensure you have met the following requirements:
 
 * You have installed the latest version of npm and Node.js.
 
-## Installing <project_name>
+## Installing bottom-sheet-test
 
-To install <project_name>, follow these steps:
+To install bottom-sheet-test, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/user/repo.git`
-2. Navigate to the project directory: `cd <project_name>`
+1. Clone the repository: `git clone https://github.com/noelfoka/bottom-sheet-test.git`
+2. Navigate to the project directory: `cd bottom-sheet-test`
 3. Install the dependencies: `npm install`
 
-## Using <project_name>
+## Using bottom-sheet-test
 
-To use <project_name>, follow these steps:
+To use bottom-sheet-test, follow these steps:
 
 1. Start the development server: `npm run dev`
-2. Open your web browser and navigate to `http://localhost:5000`
+2. Open your web browser and navigate to `http://localhost:5173`
 
-## Contributing to <project_name>
+## Contributing to bottom-sheet-test
 
-To contribute to <project_name>, follow these steps:
+To contribute to bottom-sheet-test, follow these steps:
 
 1. Fork this repository.
-2. Create a branch: `git checkout -b <branch_name>`.
+2. Create a branch: `git checkout -b main`.
 3. Make your changes and commit them: `git commit -m '<commit_message>'`
 4. Push to the original branch: `git push origin <project_name>/<location>`
 5. Create the pull request.
 
 ## Contact
 
-If you want to contact me you can reach me at `<your_email@domain.com>`.
+If you want to contact me you can reach me at `nomgnenoel@gmail.com`.
 
 ## License
 
-This project uses the following license: <license_name>.
+This project uses the following license: MIT.

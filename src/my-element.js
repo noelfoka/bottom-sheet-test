@@ -7,6 +7,8 @@ import files from './assets/files.jpg';
 import gmail from './assets/gmail.png';
 import meet from './assets/meet.png';
 import drive from './assets/drive.png';
+import copy from './assets/copy1.png';
+import nearby from './assets/nearby.png';
 
 class BottomSheet extends LitElement {
   static styles = css`
@@ -20,7 +22,7 @@ class BottomSheet extends LitElement {
       touch-action: none; /* this is required to enable dragging on mobile devices */
     }
     .line {
-      width: 75px;
+      width: 30px;
       height: 4px;
       background-color: grey;
       margin: 15px auto;
@@ -44,16 +46,19 @@ class BottomSheet extends LitElement {
     }
 
     .options {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 30px;
+    }
 
 .option {
   width: 100px;
   height: 40px;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   border-radius: 20px;
   background-color: #f0f0f0;
   color: black;
@@ -90,6 +95,11 @@ class BottomSheet extends LitElement {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.copy {
+  width: 25px;
+  height: 25px;
 }
   `;
 
@@ -147,8 +157,14 @@ class BottomSheet extends LitElement {
       <div class="line"></div>
       <slot></slot>
       <div class="options">
-        <button class="option">Save all</button>
-        <button class="option">Share</button>
+        <button class="option">
+          <img src=${copy} alt="copy" class="copy" />
+          <p>Copy</p>
+        </button>
+        <button class="option">
+          <img src=${nearby} alt="copy" class="copy" />
+          Nearby
+        </button>
       </div>
       <div class="icons">
         <div class="contact">

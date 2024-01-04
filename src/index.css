@@ -17,7 +17,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  background-color: #F7F2FA;
+  background-image: url(./assets/photo5.jpg);
   min-width: 320px;
   min-height: 100vh;
 }

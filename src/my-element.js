@@ -1,4 +1,12 @@
 import { html, css, LitElement } from 'lit';
+import photo1 from './assets/photo1.jpg';
+import photo2 from './assets/photo2.jpg';
+import photo3 from './assets/photo3.jpg';
+import photo4 from './assets/photo4.jpg';
+import files from './assets/files.jpg';
+import gmail from './assets/gmail.png';
+import meet from './assets/meet.png';
+import drive from './assets/drive.png';
 
 class BottomSheet extends LitElement {
   static styles = css`
@@ -24,6 +32,65 @@ class BottomSheet extends LitElement {
       align-items: center;
       justify-content: space-around;
     }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.option {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  color: black;
+  font-size: 16px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+  overflow-x: scroll;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.contact-name {
+  font-size: 14px;
+  color: black;
+  margin-top: 5px;
+}
+
+.files {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
   `;
 
   constructor() {
@@ -54,7 +121,9 @@ class BottomSheet extends LitElement {
   handleDrag(event) {
     if (this.dragStartY) {
       const diffY = event.clientY - this.dragStartY;
-      this.currentTranslateY = Math.max(this.currentTranslateY + diffY, 0);
+      this.currentTranslateY += diffY;
+      this.currentTranslateY = Math.max(this.currentTranslateY, 0);
+      this.currentTranslateY = Math.min(this.currentTranslateY, window.innerHeight);
       this.style.transform = `translateY(${this.currentTranslateY}px)`;
       this.dragStartY = event.clientY;
     }
@@ -77,15 +146,50 @@ class BottomSheet extends LitElement {
       
       <div class="line"></div>
       <slot></slot>
-      <h1>Icons</h1>
-      <p>nksfpgefbkv, kspjfhdijgbdkfgbpijdf,g jpdfhvjdnfijshgjdfngkbdkjf bkdfnkjnb,d f ffvbkjhpkd, fbkpndfl,bnm,sdnjn gb,nfpknb,x^dnblf d blkndf,nbkdkb d,njbkn,dfnkgbkf, bkfdnkl</p>
-      <div class="icons">
-        <i class="fa-solid fa-share-nodes"></i>
-        <i class="icon add-to"></i>
-        <i class="icon trash"></i>
-        <i class="icon order-prints"></i>
-        <i class="icon move-to-archive"></i>
+      <div class="options">
+        <button class="option">Save all</button>
+        <button class="option">Share</button>
       </div>
+      <div class="icons">
+        <div class="contact">
+          <img src=${files} alt="Alejandro" class="contact-photo">
+        <div class="contact-name">Files</div>
+      </div>
+      <div class="contact">
+        <img src=${gmail} alt="Alejandro" class="contact-photo">
+        <div class="contact-name">Gmail</div>
+      </div>
+        <div class="contact">
+          <img src=${meet} alt="Alejandro" class="contact-photo">
+          <div class="contact-name">Meet</div>
+        </div>
+        <div class="contact">
+          <img src=${drive} alt="Alejandro" class="contact-photo">
+          <div class="contact-name">Drive</div>
+        </div>
+      </div>
+
+      <div class="send-section">
+                <div class="contacts">
+                    <div class="contact">
+                        <img src=${photo1} alt="Alejandro" class="contact-photo">
+                        <div class="contact-name">Joel</div>
+                    </div>
+                    <div class="contact">
+                        <img src=${photo2} alt="Oli" class="contact-photo">
+                        <div class="contact-name">Oli </div>
+                    </div>
+
+                    <div class="contact">
+                        <img src=${photo3} alt="Ana" class="contact-photo">
+                        <div class="contact-name">Ana</div>
+                    </div>
+                    <div class="contact">
+                        <img src=${photo4} alt="Marty" class="contact-photo">
+                        <div class="contact-name">Marty</div>
+                    </div>
+                </div>
+            </div>
       </div>
     `;
   }

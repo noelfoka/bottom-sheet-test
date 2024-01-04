@@ -53,67 +53,67 @@ class BottomSheet extends LitElement {
       padding: 30px;
     }
 
-.option {
-  width: 100px;
-  height: 40px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 20px;
-  background-color: #f0f0f0;
-  color: #6750A4;
-  font-size: 16px;
-}
+    .option {
+      width: 100px;
+      height: 40px;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 20px;
+      background-color: #f0f0f0;
+      color: #6750A4;
+      font-size: 16px;
+    }
 
-.contacts {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 15px;
-  overflow-x: scroll;
-}
+    .contacts {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 15px;
+      overflow-x: scroll;
+    }
 
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.contact-photo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
+    .contact-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
 
-.contact-name {
-  font-size: 14px;
-  color: black;
-  margin-top: 5px;
-}
+    .contact-name {
+      font-size: 14px;
+      color: black;
+      margin-top: 5px;
+    }
 
-.files {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
+    .files {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
 
-.copy {
-  width: 25px;
-  height: 25px;
-  color: #6750A4;
-}
+    .copy {
+      width: 25px;
+      height: 25px;
+      color: #6750A4;
+    }
 
-@media (min-width: 768px) {
-  :host {
-      display: block;
-      position: fixed;
-      justify-content: center;
-      bottom: 0;
-      width: 80%;
-      background-color: #F7F2FA;
-      border-radius: 25px 25px 0 0;
-      touch-action: none; /* this is required to enable dragging on mobile devices */
+    @media (min-width: 768px) {
+      :host {
+        display: block;
+        position: fixed;
+        justify-content: center;
+        bottom: 0;
+        width: 80%;
+        background-color: #F7F2FA;
+        border-radius: 25px 25px 0 0;
+        touch-action: none; /* this is required to enable dragging on mobile devices */
     }
 }
   `;
@@ -201,27 +201,26 @@ class BottomSheet extends LitElement {
       </div>
 
       <div class="send-section">
-                <div class="contacts">
-                    <div class="contact">
-                        <img src=${photo1} alt="Alejandro" class="contact-photo">
-                        <div class="contact-name">Joel</div>
-                    </div>
-                    <div class="contact">
-                        <img src=${photo2} alt="Oli" class="contact-photo">
-                        <div class="contact-name">Oli </div>
-                    </div>
-
-                    <div class="contact">
-                        <img src=${photo3} alt="Ana" class="contact-photo">
-                        <div class="contact-name">Ana</div>
-                    </div>
-                    <div class="contact">
-                        <img src=${photo4} alt="Marty" class="contact-photo">
-                        <div class="contact-name">Marty</div>
-                    </div>
-                </div>
-            </div>
+        <div class="contacts">
+          <div class="contact">
+            <img src=${photo1} alt="Alejandro" class="contact-photo">
+            <div class="contact-name">Joel</div>
+          </div>
+          <div class="contact">
+            <img src=${photo2} alt="Oli" class="contact-photo">
+            <div class="contact-name">Oli </div>
+          </div>
+          <div class="contact">
+            <img src=${photo3} alt="Ana" class="contact-photo">
+            <div class="contact-name">Ana</div>
+          </div>
+          <div class="contact">
+            <img src=${photo4} alt="Marty" class="contact-photo">
+            <div class="contact-name">Marty</div>
+          </div>
+        </div>
       </div>
+    </div>
     `;
   }
 }

@@ -101,6 +101,19 @@ class BottomSheet extends LitElement {
   width: 25px;
   height: 25px;
 }
+
+@media (min-width: 768px) {
+  :host {
+      display: block;
+      position: fixed;
+      justify-content: center;
+      bottom: 0;
+      width: 80%;
+      background-color: white;
+      border-radius: 25px 25px 0 0;
+      touch-action: none; /* this is required to enable dragging on mobile devices */
+    }
+}
   `;
 
   constructor() {

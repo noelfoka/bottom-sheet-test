@@ -56,12 +56,12 @@ class BottomSheet extends LitElement {
     .option {
       width: 100px;
       height: 40px;
-      border: none;
       display: flex;
       align-items: center;
       justify-content: space-around;
       border-radius: 20px;
-      background-color: #f0f0f0;
+      background-color: #F7F2FA;
+      boder: 1px solid #6750A4;
       color: #6750A4;
       font-size: 16px;
     }
